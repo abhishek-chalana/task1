@@ -119,6 +119,6 @@ const sortName = (names) => {
   return sortedNames;
 };
 
-const names = ["SIMRAN kAUR", "John Doe", "Alice Johnson", "Jane Smith"];
+const names = ["SIMRAN kAUR", "Paras Bisht", "Sukhpal Singh", "Taniya Saini"];
 const result3 = sortName(names);
 console.log(result3);

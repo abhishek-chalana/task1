@@ -98,7 +98,22 @@ console.log("////////////////////////////////////////////////");
 
 // Ans.
 
-//  pending not understand
+const sumDigProd=(...numbers)=>{
+  let sumOfDigits = numbers.reduce((acc1, currValue1) => acc1 + currValue1)
+
+  console.log(sumOfDigits)
+  
+  while( sumOfDigits >= 10){
+    const digit = String(sumOfDigits).split("")
+    console.log(digit)
+    sumOfDigits = digit.reduce((acc, currValue)=> acc * currValue)
+  }
+  return sumOfDigits;
+}
+
+console.log(sumDigProd(12,15))
+
+console.log("////////////////////////////////////////////////")
 
 // Q6. Create a function that takes an array of names in the format "First Name Last Name" (e.g. "SIMRAN kAUR"), and returns an array of these names sorted by the length of their last names. If the length of multiple last names are the same, then proceed to sort alphabetically by last name.
 
@@ -111,6 +126,7 @@ const sortName = (names) => {
 
   Names.sort((a,b)=>{
     const lengthDiff = a.lastName.length - b.lastName.length
+    console.log(lengthDiff)
 
     return lengthDiff;
   })
@@ -119,6 +135,6 @@ const sortName = (names) => {
   return sortedNames;
 };
 
-const names = ["SIMRAN kAUR", "Paras Bisht", "Sukhpal Singh", "Taniya Saini"];
+const names = ["SIMRAN kAUR", "Sukhpal Singh", "Paras Bisht",  "Taniya Saini"];
 const result3 = sortName(names);
 console.log(result3);
